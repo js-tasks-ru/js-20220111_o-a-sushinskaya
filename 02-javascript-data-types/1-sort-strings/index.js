@@ -15,7 +15,7 @@ export function sortStrings(arr, param = 'asc') {
 }
 
 function handlerLocaleCompare(firstParam, secondParam) {
-  return firstParam.localeCompare(secondParam, ["en", "ru"], {
+  return firstParam.localeCompare(secondParam, ['ru', 'en'], {
     caseFirst: 'upper'
   });
 }
