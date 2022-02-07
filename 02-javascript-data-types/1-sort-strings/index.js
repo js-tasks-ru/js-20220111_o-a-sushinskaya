@@ -8,7 +8,11 @@ export function sortStrings(arr, param = 'asc') {
   let sortedArr = [...arr];
 
   sortedArr.sort((a, b) => {
-    return param === 'asc' ? handlerLocaleCompare(a, b) : handlerLocaleCompare(b, a);
+    if(param === 'asc') {
+      return handlerLocaleCompare(a, b)
+    } else if (param === 'desc') {
+      return handlerLocaleCompare(b, a)
+    }
   });
 
   return sortedArr;
